@@ -1,7 +1,10 @@
 # Links
-## BCC (Blockland Content Creators) Discord
-- https://discord.gg/r6ERkqy
+## Community
+- [BCC (Blockland Content Creators) Discord](https://discord.gg/r6ERkqy)
     - You can talk to one of the 3 people who still play Blockland
+- [Anskara Discord (My Server)](discord.gg/FPQCuScm4M)
+    - I'm probably working on a game called Anskara
+    - You can talk to one of the 3 people in my server
 
 ## Torque3D/TorqueScript Documentation
 - [Torque3D Docs](https://torque-3d.readthedocs.io/en/latest/script/consoleref.html)
@@ -30,3 +33,4 @@
 - DSO Decompiler: [Untorque](https://github.com/figment/Untorque)
 - Abandoned Blender DTS Exporter: [io_scene_dts](https://github.com/qoh/io_scene_dts)
     - I ended up having to downgrade Blender to v2.77 to get it to work
+    - Wasn't able to find anything else that works as easily as this
