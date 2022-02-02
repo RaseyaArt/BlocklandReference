@@ -1,27 +1,28 @@
 # Blockland Reference Doc
-## Contents
-### [0. To-do](#0-to-do)
-### 1. Data Strucutres
-#### [1.1 List](#11-list)
-#### [1.2 Stack](#12-stack)
-#### [1.3 Queue](#13-queue)
-### 2. General
-#### [2.1 Overwrite/Add-to Existing Functions](#21-overwriteadd-to-existing-functions)
-##### [2.1.1 List of (currently) Known Functions](#211-list-of-currently-known-functions)
-#### [2.2 Tick/Update Function](#22-tickupdate-function)
-### 3. GUI
-#### [3.1 Display 3D Model](#31-display-3d-model)
-#### [3.2 Mouse Controls](#32-mouse-controls)
-#### [3.3 Get Cursor Position](#33-get-cursor-position)
-#### [3.4 onWake](#34-onwake)
-#### [3.5 Binding for Toggling GUI](#35-binding-for-toggling-gui)
-### 4. Network Architecture
-#### [4.1 Basic Client/Server Commands](#41-basic-clientserver-commands)
-### 5. Math
-#### [5.1 Distance Between Two Points](#51-distance-between-two-points)
+# Contents
 
+1. [To-do](#1-to-do)
+1. [Data Strucutres](#2-data-structures)
+    - 2.1 [List](#21-list)
+    - 2.2 [Stack](#22-stack)
+    - 2.3 [Queue](#23-queue)
+1. [General](#3-general)
+    - 3.1 [Overwrite/Add-to Existing Functions](#31-overwriteadd-to-existing-functions)
+        - 3.1.1 [List of (currently) Known Functions](#311-list-of-currently-known-functions)
+    - 3.2 [Tick/Update Function](#32-tickupdate-function)
+1. [GUI](#4-gui)
+    - 4.1 [Display 3D Model](#41-display-3d-model)
+    - 4.2 [Mouse Controls](#42-mouse-controls)
+    - 4.3 [Get Cursor Position](#43-get-cursor-position)
+    - 4.4 [onWake](#44-onwake)
+    - 4.5 [Binding for Toggling GUI](#45-binding-for-toggling-gui)
+1. [Network Architecture](#5-network-architecture)
+    - 4.1 [Basic Client/Server Commands](#41-basic-clientserver-commands)
+1. [Math](#6-math)
+    - 6.1 [Distance Between Two Points](#61-distance-between-two-points)
 
-# 0. To-do
+***
+# 1. To-do
 - Play client/2D sound through script
     - 2D music block add-on
 - Physics
@@ -72,10 +73,10 @@
 - I/O Operation
 - Live altering of model textures (for painting)
 
-# 1. Data Structures
+# 2. Data Structures
 I'm not sure whether these exist in TGE. For now, I made my own, as they're fairly simple to set up.
 
-## 1.1 List
+## 2.1 List
 
     function CreateList(%name)
     {
@@ -156,7 +157,7 @@ I'm not sure whether these exist in TGE. For now, I made my own, as they're fair
 
 - List isn't feature complete
 
-## 1.2 Stack
+## 2.2 Stack
 
     function CreateStack(%name)
     {
@@ -260,7 +261,7 @@ I'm not sure whether these exist in TGE. For now, I made my own, as they're fair
         %this.count = 0;
     }
 
-## 1.3 Queue
+## 2.3 Queue
 
     function CreateQueue(%name)
     {
@@ -331,8 +332,8 @@ I'm not sure whether these exist in TGE. For now, I made my own, as they're fair
         %this.count = 0;
     }
 
-# 2. General
-## 2.1 Overwrite/Add-to Existing Functions
+# 3. General
+## 3.1 Overwrite/Add-to Existing Functions
 
     package PackageName
     {
@@ -346,7 +347,7 @@ I'm not sure whether these exist in TGE. For now, I made my own, as they're fair
 
 - Parent::serverCmdLight(%c); plays the normal functionality
 
-### 2.1.1 List of (currently) Known Functions
+### 3.1.1 List of (currently) Known Functions
 - serverCmdCancelBrick(%c)
     - NumPad 0
 - serverCmdShiftBrick(%c, %x, %y, %z)
@@ -388,7 +389,7 @@ I'm not sure whether these exist in TGE. For now, I made my own, as they're fair
 - WeaponImage::onUnMount(%t, %p, %s)
     - %s == 0: UnUseTool
 
-## 2.2 Tick/Update Function
+## 3.2 Tick/Update Function
 
     $tickTime = 0;
 
@@ -400,8 +401,8 @@ I'm not sure whether these exist in TGE. For now, I made my own, as they're fair
         schedule($tickTime, 0, "Update");
     }
 
-# 3. GUI
-## 3.1 Display 3D Model
+# 4. GUI
+## 4.1 Display 3D Model
 
     function ObjectViewTest()
     {
@@ -432,7 +433,7 @@ I'm not sure whether these exist in TGE. For now, I made my own, as they're fair
     so finding documentation on the old setObject has proven a little bit difficult
     - setObject won't work if the other parameters are left out
 
-## 3.2 Mouse Controls
+## 4.2 Mouse Controls
 
 https://torque-3d.readthedocs.io/en/latest/script/class/GuiMouseEventCtrl.html
 
@@ -511,21 +512,21 @@ https://torque-3d.readthedocs.io/en/latest/script/class/GuiMouseEventCtrl.html
     - It should be possible to get around this by directly taking an input and then sending through the cursor location
     - I have not yet found a way to properly intercept inputs while a GUI is open, however
 
-## 3.3 Get Cursor Position
+## 4.3 Get Cursor Position
 
     %cursorPos = Canvas.getCursorPos(); // returns a vector formatted as a string, ex: "210 30"
 
     %cursorXPos = getWord(%cursorPos, 0);
     %cursorYPos = getWord(%cursorPos, 1);
 
-## 3.4 onWake:
+## 4.4 onWake:
 
     function TargetGUIControl::onWake()
     {
         // code
     }
 
-## 3.5 Binding for Toggling GUI
+## 4.5 Binding for Toggling GUI
 
     $remapDivision[$remapCount] = "BindingDivisionName";
     $remapName[$remapCount] = "BindingName";
@@ -548,8 +549,8 @@ https://torque-3d.readthedocs.io/en/latest/script/class/GuiMouseEventCtrl.html
         }
     }
 
-# 4. Network Architecture
-## 4.1 Basic Client/Server Commands
+# 5. Network Architecture
+## 5.1 Basic Client/Server Commands
 
     %count = ClientGroup.getCount();
     for(%i = 0; %i < %count; %i++)
@@ -562,8 +563,8 @@ https://torque-3d.readthedocs.io/en/latest/script/class/GuiMouseEventCtrl.html
 - Can only send up to 256 characters
 - There is also commandToServer which calls serverCmd[command] on the server
 
-# 5. Math
-## 5.1 Distance Between Two Points
+# 6. Math
+## 6.1 Distance Between Two Points
 
     %distance = vectorDist(%firstPos, %secondPos);
 
