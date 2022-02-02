@@ -393,12 +393,13 @@ I'm not sure whether these exist in TGE. For now, I made my own, as they're fair
 
     $tickTime = 0;
 
-    schedule($tickTime, 0, "Update");
+    $globalTick = schedule($tickTime, 0, "Update");
 
     function Update()
     {
+        cancel($globalTick);
         // code
-        schedule($tickTime, 0, "Update");
+        $globalTick = schedule($tickTime, 0, "Update");
     }
 
 # 4. GUI
