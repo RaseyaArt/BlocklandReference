@@ -391,7 +391,7 @@ I'm not sure whether these exist in TGE. For now, I made my own, as they're fair
 
 ## 3.2 Tick/Update Function
 
-    $tickTime = 0;
+    $tickTime = 32;
 
     $globalTick = schedule($tickTime, 0, "Update");
 
@@ -401,6 +401,8 @@ I'm not sure whether these exist in TGE. For now, I made my own, as they're fair
         // code
         $globalTick = schedule($tickTime, 0, "Update");
     }
+
+- 32 is the engine's tick rate; this way the script won't be updating faster than the engine
 
 # 4. GUI
 ## 4.1 Display 3D Model

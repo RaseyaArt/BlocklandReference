@@ -29,8 +29,9 @@
 ## Add-Ons Archives
 - [RTB Archive](https://blocklandglass.com/addons/rtb/)
 
-## Downloads
+## Utilities
 - DSO Decompiler: [Untorque](https://github.com/figment/Untorque)
 - Abandoned Blender DTS Exporter: [io_scene_dts](https://github.com/qoh/io_scene_dts)
     - I ended up having to downgrade Blender to v2.77 to get it to work
     - Wasn't able to find anything else that works as easily as this
+- [Blockland DLL tools](https://gitlab.com/Queuenard/blockland-DLL)
