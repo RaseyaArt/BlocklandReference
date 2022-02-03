@@ -2,7 +2,7 @@
 ## Community
 - [BCC (Blockland Content Creators) Discord](https://discord.gg/r6ERkqy)
     - You can talk to one of the 3 people who still play Blockland
-- [Anskara Discord (My Server)](discord.gg/FPQCuScm4M)
+- [Anskara Discord (My Server)](https://discord.gg/FPQCuScm4M)
     - I'm probably working on a game called Anskara
     - You can talk to one of the 3 people in my server
 
