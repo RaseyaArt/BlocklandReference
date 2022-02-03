@@ -34,7 +34,4 @@
 - Abandoned Blender DTS Exporter: [io_scene_dts](https://github.com/qoh/io_scene_dts)
     - I ended up having to downgrade Blender to v2.77 to get it to work
     - Wasn't able to find anything else that works as easily as this
-<<<<<<< HEAD
 - [Blockland DLL tools](https://gitlab.com/Queuenard/blockland-DLL)
-=======
->>>>>>> 52a16d7793b1cca94bdf96b3cb7a1bd412987bab
