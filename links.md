@@ -2,7 +2,7 @@
 ## Community
 - [BCC (Blockland Content Creators) Discord](https://discord.gg/r6ERkqy)
     - You can talk to one of the 3 people who still play Blockland
-- [Anskara Discord (My Server)](discord.gg/FPQCuScm4M)
+- [Anskara Discord (My Server)](https://discord.gg/FPQCuScm4M)
     - I'm probably working on a game called Anskara
     - You can talk to one of the 3 people in my server
 
@@ -34,4 +34,7 @@
 - Abandoned Blender DTS Exporter: [io_scene_dts](https://github.com/qoh/io_scene_dts)
     - I ended up having to downgrade Blender to v2.77 to get it to work
     - Wasn't able to find anything else that works as easily as this
+<<<<<<< HEAD
 - [Blockland DLL tools](https://gitlab.com/Queuenard/blockland-DLL)
+=======
+>>>>>>> 52a16d7793b1cca94bdf96b3cb7a1bd412987bab
